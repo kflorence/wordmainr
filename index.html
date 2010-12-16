@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Wordmainr</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <script src="http://cdn.jquerytools.org/1.2.5/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="src/js/jquery.pagination.js"></script>
+    <script type="text/javascript" src="src/js/wordmainr.js"></script>
+    <script type="text/javascript">
+      jQuery(function($) { wordmainr.init(); });
+    </script>
+  </head>
+  <body>
+    <h1>Wordmainr</h1>
+    <div id="search">
+      <input type="text" name="query" id="query" />
+      <button id="submit">Search</button>
+      <button id="clear">Clear</button>
+      <a class="toggle" href="#options">Options</a>
+    </div>
+    <div id="options">
+      <div class="container clearfix">
+        <div class="pod">
+          <h3>Search Tips</h3>
+          <ul>
+            <li>Use a hyphen (dash) to give the location of a missing letter: w-rd or -are</li>
+            <li>Use an asterisk (star) for any number of unknown letters: lett* or *gry or ar*ct</li>
+            <li>Exclude words containing the letters that follow a caret (hat): ma-e ^kt</li>
+            <li>Or enter a few letters (without hyphens or asterisks) to see if they make any words.</li>
+          </ul>
+        </div>
+        <div class="pod">
+          <h3>Filters</h3>
+          <ul>
+            <li>
+              Results per page:
+              <select class="per-page">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+              </select>
+            </li>
+            <li>
+              Min length: <input type="text" name="min-length" class="small" />
+              Max length: <input type="text" name="max-length" class="small" />
+            </li>
+            <li>
+              Availability: 
+              <input type="checkbox" name="tld" id="tld" class="availability checkbox" /><label for="tld">tld's</label>
+              <input type="checkbox" name="taken" id="taken" class="availability checkbox" /><label for="taken">taken</label>
+              <input type="checkbox" name="maybe" id="maybe" class="availability checkbox" /><label for="maybe">maybe</label>
+              <input type="checkbox" name="available" id="available" class="availability checkbox" /><label for="available">available</label>
+              <input type="checkbox" name="unavailable" id="unavailable" class="availability checkbox" /><label for="unavailable">unavailable</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div class="top navigation clearfix"></div>
+      <div id="results" class="clearfix">
+        <div id="status"></div>
+        <div id="words">
+            <ul id="list"></ul>
+        </div>
+<!--
+                <div id="information">
+                    <h2>&ldquo;Word&rdquo;</h2>
+                    <div id="definitions">
+                        <h3>Definition</h3>
+
+                        <div class="container">
+                          <p class="part-of-speech">&ndash; noun</p>
+                          <ol>
+                              <li>Some definition here.</li>
+                              <li>Another definition here.</li>
+                          </ol>
+
+                          <p class="part-of-speech">&mdash; verb</p>
+                          <ol>
+                              <li>Some definition here.</li>
+                              <li>Another definition here.</li>
+                          </ol>
+                        </div>
+                    </div>
+                    <div id="domains">
+                        <h3>Domain Results</h3>
+                        <div class="container"></div>
+                    </div>
+                </div>
+-->
+        <div id="information">
+          <h3>What is Wordmainr?</h3>
+          <p>
+            Wordmainr is a free web service that helps you search for
+            words and then in turn match them to domain listings, definitions,
+            whois and registration information.
+          </p>
+        </div>
+      </div>
+      <div class="bottom navigation clearfix"></div>
+    </div>
+    <div id="credits">
+      <p>Brought to you by <a href="http://kflorence.com/">kflorence.com</a> (development),
+        <a href="http://wordnik.com/">wordnik.com</a> (definitions),
+        <a href="http://domai.nr/">domai.nr</a> (domain listings and availabilities), and
+        <a href="http://sourceforge.net/projects/phpwhois/">phpwhois</a> (whois information).
+      </p>
+    </div>
+  </body>
+</html>
